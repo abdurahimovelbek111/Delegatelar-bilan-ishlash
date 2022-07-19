@@ -10,12 +10,12 @@ namespace Delegatelar_bilan_ishlash
     {
         public void Uzb2usd(Pul pul)
         {
-            pul.Miqdori /= 1090;
+            pul.Miqdori /= 10900;
             pul.Valyuta = "USD";
         }
         public void Usd2Uzb(Pul pul)
         {
-            pul.Miqdori *= 1090;
+            pul.Miqdori *= 10900;
             pul.Valyuta = "UZB";
         }
         public void Pul_Yuborish(Pul pul, string bank, Pul.PulDelegate @delegate)
@@ -31,7 +31,7 @@ namespace Delegatelar_bilan_ishlash
             if (@delegate.Target != null)
                 @delegate(pul);
 
-            Console.WriteLine(pul.Miqdori.ToString("0.00") + " " + pul.Valyuta + " Miqdoridagi pul " + bank + " Bankga muffaqatli pul o'tkazildi .\n" +
+            Console.WriteLine(pul.Miqdori.ToString("0.00") + " " + pul.Valyuta + " Miqdoridagi pul " + bank + " Bankdan muffaqatli pul olindi .\n" +
                 "Etiboriz uchun Raxmat!!!!");
 
         }

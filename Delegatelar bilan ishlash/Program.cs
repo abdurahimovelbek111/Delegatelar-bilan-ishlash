@@ -12,6 +12,7 @@ switch (val)
         PulBoshqaruvchisi boshqaruvchisi = new PulBoshqaruvchisi();
         Pul.PulDelegate @delegate = new Pul.PulDelegate(boshqaruvchisi.Usd2Uzb);
         boshqaruvchisi.Pul_Yuborish(pul, "Ipoteka", @delegate);
+        Console.WriteLine(@delegate.Method.Name);
         break;
         case 1:
         Console.WriteLine("Pul miqdorini kiriting : ");
@@ -21,6 +22,7 @@ switch (val)
         Pul.PulDelegate @delegate2 = new Pul.PulDelegate(boshqaruvchisi2.Uzb2usd);
         @delegate = boshqaruvchisi2.Uzb2usd;
         boshqaruvchisi2.Pul_Olish(pul2, "Xalq", @delegate2);
+        Console.WriteLine(@delegate2.Method.Name);
         break;
     default:
         Console.WriteLine("Bunday valyuta turi yo'q .\n" +
